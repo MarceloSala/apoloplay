@@ -1,16 +1,16 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/api/src",
+  "sourceRoot": "apps/authentication-service/src",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nrwl/node:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/api",
-        "main": "apps/api/src/main.ts",
-        "tsConfig": "apps/api/tsconfig.app.json",
-        "assets": ["apps/api/src/assets"]
+        "outputPath": "dist/apps/authentication-service",
+        "main": "apps/authentication-service/src/main.ts",
+        "tsConfig": "apps/authentication-service/tsconfig.app.json",
+        "assets": ["apps/authentication-service/src/assets"]
       },
       "configurations": {
         "production": {
@@ -19,8 +19,8 @@
           "inspect": false,
           "fileReplacements": [
             {
-              "replace": "apps/api/src/environments/environment.ts",
-              "with": "apps/api/src/environments/environment.prod.ts"
+              "replace": "apps/authentication-service/src/environments/environment.ts",
+              "with": "apps/authentication-service/src/environments/environment.prod.ts"
             }
           ]
         }
@@ -29,21 +29,21 @@
     "serve": {
       "executor": "@nrwl/node:node",
       "options": {
-        "buildTarget": "api:build"
+        "buildTarget": "authentication-service:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/api/**/*.ts"]
+        "lintFilePatterns": ["apps/authentication-service/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/api"],
+      "outputs": ["coverage/apps/authentication-service"],
       "options": {
-        "jestConfig": "apps/api/jest.config.ts",
+        "jestConfig": "apps/authentication-service/jest.config.ts",
         "passWithNoTests": true
       }
     }
