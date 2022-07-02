@@ -50,7 +50,7 @@
         "buildTarget": "frontend:build",
         "hmr": true,
         "proxyConfig": "apps/frontend/proxy.conf.json",
-        "port":4200
+        "port": 4200
       },
       "configurations": {
         "development": {

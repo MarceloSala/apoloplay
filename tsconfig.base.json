@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@apoloplay/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@apoloplay/definitions": ["libs/definitions/src/index.ts"],
+      "@apoloplay/mocks": ["libs/mocks/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

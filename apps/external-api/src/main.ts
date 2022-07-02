@@ -1,16 +1,19 @@
 import * as express from 'express';
-import { Message } from '@apoloplay/api-interfaces';
+import path = require('path');
+import router from './app/routes';
 
 const app = express();
 
-const greeting: Message = { message: 'juan estuvo aqui' };
-
-app.get('/api', (req, res) => {
-  res.send(greeting);
+//middlewares
+app.use((res, req, next) => {
+  next();
 });
+
+//routes
+app.use(router);
 
 const port = process.env.port || 3001;
 const server = app.listen(port, () => {
-  console.log('Listening at http://localhost:' + port + '/api');
+  console.log('Listening at http://localhost:' + port);
 });
 server.on('error', console.error);
