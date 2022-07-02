@@ -1,0 +1,14 @@
+.body-container{
+  overflow: scroll;
+}
+
+.content{
+  overflow-y: scroll;
+  display: flex;
+  margin-top: 110px;
+  margin-left: 265px;
+  margin-right: 265px;
+  max-height: 80vh;
+  flex-direction: column;
+  background-color: red;
+}

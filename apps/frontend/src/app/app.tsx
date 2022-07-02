@@ -1,18 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { Message } from '@apoloplay/api-interfaces';
+import { Route, Routes } from 'react-router-dom';
+import Header from './components/header/component';
+import Navbar from './components/navbar/component';
+import './styles.css';
+import Artists from './views/artist/home/component';
+import Home from './views/home/component';
+import Songs from './views/songs/component';
 
 export const App = () => {
-
-
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
+    <>
+      <div className="body-container">
+        <Header />
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/songs" element={<Songs />} />
+            <Route path="/artists" element={<Artists />} />
+          </Routes>
+        </div>
+      </div>
+    </>
   );
 };
 
