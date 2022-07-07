@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 
-export const Navbar = () => {
+export const Navbar: FC = () => {
   return (
     <>
       <input type="checkbox" id="btn-menu" />

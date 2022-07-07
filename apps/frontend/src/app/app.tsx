@@ -5,8 +5,9 @@ import Artists from './views/artist/home/component';
 import Home from './views/home/component';
 import Songs from './views/songs/component';
 import './styles.css';
+import { FC } from 'react';
 
-export const App = () => {
+export const App: FC = () => {
   return (
     <>
       <div className="body-container">
