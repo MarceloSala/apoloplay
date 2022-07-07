@@ -3,7 +3,7 @@ import { UserMock } from '@apoloplay/mocks';
 import { WelcomeUser } from '../../components/welcomeUser/component';
 import './styles.css';
 
-const Test: User[] = [];
+const user: User[] = [];
 
 export const Home = () => {
   return (

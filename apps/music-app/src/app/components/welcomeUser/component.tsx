@@ -1,6 +1,7 @@
 import { User } from '@apoloplay/definitions';
 import { FC } from 'react';
 import './welcomeUser.css';
+
 interface UserProps {
   user: User;
 }
