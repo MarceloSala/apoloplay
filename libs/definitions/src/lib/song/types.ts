@@ -1,11 +1,11 @@
 import { Types } from 'mongoose';
-import internal = require('stream');
 import { Artist } from '../artist';
 
 export interface Song {
     _id: Types.ObjectId;
+    image: string;
     name: string;
-    alias: string;
-    agePublic: number;
+    publish_year: number;
     artist: Artist;
+    url?: string;
   }
