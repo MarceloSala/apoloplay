@@ -1,5 +1,9 @@
+import { User } from '@apoloplay/definitions';
 import { UserMock } from '@apoloplay/mocks';
+import { WelcomeUser } from '../../components/welcomeUser/component';
 import './styles.css';
+
+const Test: User[] = [];
 
 export const Home = () => {
   return (
@@ -9,7 +13,7 @@ export const Home = () => {
           <h1 className="title">Bienvenido</h1>
         </div>
         <div className="greetings-container">
-          <p className="greetings">{UserMock.name}</p>
+          <WelcomeUser user={UserMock} />
           <hr className="divider" />
           <p className="message">
             Registrate o inicia sesion para comenzar a escuchar la mejor{' '}
