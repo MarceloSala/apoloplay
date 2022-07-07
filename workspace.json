@@ -2,13 +2,11 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "auth": "apps/auth",
-    "auth-e2e": "apps/auth-e2e",
+    "auth-app": "apps/auth-app",
     "authentication-service": "apps/authentication-service",
     "definitions": "libs/definitions",
-    "external-api": "apps/external-api",
-    "frontend": "apps/frontend",
-    "frontend-e2e": "apps/frontend-e2e",
-    "mocks": "libs/mocks"
+    "mocks": "libs/mocks",
+    "music-app": "apps/music-app",
+    "music-service": "apps/music-service"
   }
 }
