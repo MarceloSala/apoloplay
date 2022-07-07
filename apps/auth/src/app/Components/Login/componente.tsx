@@ -1,6 +1,6 @@
 import './estilogin.css';
 
-export const login = () => {
+export const Login = () => {
     return (
         <section className="forma-login">
         <h1>¡Bienvenido!</h1>
@@ -11,3 +11,4 @@ export const login = () => {
     </section>
     )
 }
+export default Login;
