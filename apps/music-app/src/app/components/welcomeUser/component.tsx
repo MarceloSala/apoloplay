@@ -10,7 +10,6 @@ export const WelcomeUser: FC<UserProps> = ({ user }) => {
   return (
     <div className="user-info">
       <p className="greetings">{user.name}</p>
-      <p className="extra-info">email: {user.email}</p>
     </div>
   );
 };
