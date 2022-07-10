@@ -1,8 +1,25 @@
 export const Songs = () => {
   return (
     <div>
-      <div>This is Songs</div>
+      <h1 className="title_Populares">Populares</h1>
+       <div className="Populares">
+         <div className="song"></div>
+         <div className="song"></div>
+         <div className="song"></div>
+         <div className="song"></div>
+         <div className="song"></div>
+       </div>
+      <h1 className="title_Genero">Genero</h1>
+        <div className="Genero">
+        <div className="song"></div>
+         <div className="song"></div>
+         <div className="song"></div>
+         <div className="song"></div>
+         <div className="song"></div>
+        </div>
+      
     </div>
+   
   );
 };
 
