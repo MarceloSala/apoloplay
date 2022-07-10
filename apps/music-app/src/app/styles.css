@@ -33,7 +33,7 @@
 }
 
 .body-container .content .Populares{
-  margin-top: 20px;
+  margin-top: 5px;
   margin-left: 55px;
   margin-right: 60px;
   min-height: 30vh;
@@ -41,6 +41,7 @@
   border-radius: 8px;
   justify-content: center;   
   display: flex;  
+  overflow-x: scroll; 
 }
 
 
@@ -54,12 +55,12 @@
 }
 
 .body-container .content .title_Genero{
-  margin-top: -25px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
 .body-container .content .Genero{
-  margin-top: -8px;
+  margin-top: -30px;
   margin-left: 55px;
   margin-right: 55px;
   min-height: 30vh;
@@ -67,6 +68,7 @@
   border-radius: 8px;
   justify-content: center;
   display: flex;   
+  overflow-x: scroll; 
 }
 
 .body-container .content .Genero .song{
