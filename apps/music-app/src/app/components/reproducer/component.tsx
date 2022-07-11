@@ -13,7 +13,7 @@ export const Reproducer: FC<ReproducerProps> = ({ song }) => {
         <img src={song?.image} alt="!" className="repro-img" />
         <div className="song-info-container">
           <div className="repro-song">{song?.name}</div>
-          <div className="repro-artist">{song?.artist.alias}</div>
+          <div className="repro-artist">{song?.publish_year}</div>
         </div>
       </div>
     </>

@@ -28,7 +28,7 @@ export const SongPreview: FC<SongProps> = ({ songs }) => {
           </div>
           <hr className="song-div" />
           <div className="song-artist">
-            <p>{song.artist.name}</p>
+            <p>{song.publish_year}</p>
           </div>
         </div>
       ))}

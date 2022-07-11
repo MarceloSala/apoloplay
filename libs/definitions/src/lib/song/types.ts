@@ -6,6 +6,5 @@ export interface Song {
   image: string;
   name: string;
   publish_year: number;
-  artist: Artist;
   url?: string;
 }
