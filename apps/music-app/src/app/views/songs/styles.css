@@ -1,0 +1,23 @@
+
+.title_Populares{
+    margin-top: 80px;
+    margin-left: 10px;
+  }
+  
+  .body-container .content .Populares{
+    margin-top: 50px;
+    margin-left: 55px;
+    margin-right: 60px;
+    min-height: 30vh;
+    max-height: 75vh;  
+    border-radius: 8px;
+    justify-content: center;   
+    display: flex;  
+    overflow-x: scroll; 
+  }
+  
+  
+ 
+  
+
+  
