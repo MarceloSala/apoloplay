@@ -1,13 +1,22 @@
 import { FC } from 'react';
 import './songPreview.css';
-export const SongPreview: FC = () => {
+
+import { Song } from '@apoloplay/definitions';
+
+interface SongProps{
+   songs:Song[];
+}
+
+export const SongPreview: FC<SongProps>= ({songs}) => {
   return (
     <>
-      <div className="test">song.image</div>
-      <div className="test">song.name</div>
-      <div className="test">song.artist</div>
-    </>
+      {songs.map((song) => (
+      <img src={song.image} className="song"/>
+     ))}
+
+    </>    
   );
 };
 
 export default SongPreview;
+
