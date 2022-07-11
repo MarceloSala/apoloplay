@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './songPreview.css';
+import './componentSong.css';
 
 import { Song } from '@apoloplay/definitions';
 import { saveSongProp } from '../../services/localStorage';
