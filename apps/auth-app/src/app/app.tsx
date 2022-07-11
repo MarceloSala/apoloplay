@@ -12,10 +12,11 @@ import { useEffect } from 'react';
 export function App() {
   const navigate = useNavigate();
   const location = useLocation();
+
   useEffect(() => {
     if (location.pathname !== '/login' && location.pathname !== '/register')
       navigate('/login');
-  });
+  }, [location]);
 
   return (
     <div className="container">

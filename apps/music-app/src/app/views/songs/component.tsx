@@ -1,3 +1,4 @@
+
 import './styles.css';
 import {SongPreview } from '../../components/songPreview/component';
 import { SongArray } from '@apoloplay/mocks';
@@ -10,6 +11,7 @@ export const Songs = () => {
       <div className="Populares">
             <SongPreview songs={SongArray}/>
        </div>
+
     </div>
   );
 };

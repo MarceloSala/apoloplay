@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import './songPreview.css';
+
 import { Song } from '@apoloplay/definitions';
 
 interface SongProps{
@@ -18,3 +19,4 @@ export const SongPreview: FC<SongProps>= ({songs}) => {
 };
 
 export default SongPreview;
+
