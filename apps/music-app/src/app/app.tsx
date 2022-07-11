@@ -3,9 +3,11 @@ import Header from './components/header/component';
 import Navbar from './components/navbar/component';
 import Artists from './views/artist/component';
 import Home from './views/home/component';
-import Songs from './views/songs/component';
+import Songs from './views/song/component';
 import './styles.css';
 import { FC } from 'react';
+import Reproducer from './components/reproducer/component';
+import { getSongProp } from './services/localStorage';
 
 export const App: FC = () => {
   return (
