@@ -1,0 +1,30 @@
+.repro {
+  display: flex;
+}
+.repro-img {
+  background-color: white;
+
+  min-width: 64px;
+  max-width: 64px;
+
+  min-height: 64px;
+  max-height: 64px;
+
+  border-radius: 50%;
+}
+.song-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 10px;
+  padding-left: 10px;
+
+  width: 256px;
+}
+.repro-song {
+  font-size: 1em;
+}
+.repro-artist {
+  font-size: 0.8em;
+}

@@ -1,0 +1,19 @@
+.title_populares {
+  margin-top: 80px;
+  margin-left: 10px;
+}
+
+.populares {
+  display: flex;
+
+  border-radius: 8px;
+  padding: 24px;
+  overflow-x: scroll;
+
+  width: 95%;
+}
+
+.songs {
+  display: flex;
+  justify-content: center;
+}

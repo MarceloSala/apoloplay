@@ -1,9 +1,7 @@
 import { User } from '@apoloplay/definitions';
 import { UserMock } from '@apoloplay/mocks';
-import { WelcomeUser } from '../../components/welcomeUser/component';
+import { WelcomeUser } from '../../components/user/component';
 import './styles.css';
-
-const user: User[] = [];
 
 export const Home = () => {
   return (
