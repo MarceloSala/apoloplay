@@ -100,6 +100,24 @@ export const ShakiraSongs: Song[] = [
     name: 'Chantaje',
     publish_year: 2016,
   },
+  {
+    _id: new Types.ObjectId(),
+    image: 'https://pbs.twimg.com/media/CvuR_ExUkAA7GTX.jpg',
+    name: 'Chantaje',
+    publish_year: 2016,
+  },
+  {
+    _id: new Types.ObjectId(),
+    image: 'https://pbs.twimg.com/media/CvuR_ExUkAA7GTX.jpg',
+    name: 'Chantaje',
+    publish_year: 2016,
+  },
+  {
+    _id: new Types.ObjectId(),
+    image: 'https://pbs.twimg.com/media/CvuR_ExUkAA7GTX.jpg',
+    name: 'Chantaje',
+    publish_year: 2016,
+  },
 ];
 
 export const AdeleSongs: Song[] = [
