@@ -5,7 +5,7 @@ import { Song } from '@apoloplay/definitions';
 import { saveSongProp } from '../../services/localStorage';
 
 interface SongProps {
-  songs: Song[];
+  songs?: Song[];
 }
 
 export const SongPreview: FC<SongProps> = ({ songs }) => {
@@ -15,7 +15,7 @@ export const SongPreview: FC<SongProps> = ({ songs }) => {
 
   return (
     <>
-      {songs.map((song) => (
+      {songs?.map((song) => (
         <div key={song._id.toString()} className="song">
           <img src={song.image} className="song-img" />
           <div

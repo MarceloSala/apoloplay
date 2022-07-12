@@ -58,11 +58,77 @@ export const SongArray: Song[] = [
     name: 'Waka Waka (This Time for Africa)',
     publish_year: 2010,
   },
+];
+
+export const ShakiraSongs: Song[] = [
   {
     _id: new Types.ObjectId(),
     image:
-      'https://static1-sevilla.abc.es/media/201210/02/James-Bond-Adele-Skyfall--644x662.jpg',
-    name: 'Skyfall',
-    publish_year: 2012,
+      'https://cherry-brightspot.s3.amazonaws.com/media/2010/06/08/shakira.jpg',
+    name: 'Waka Waka (This Time for Africa)',
+    publish_year: 2010,
+  },
+  {
+    _id: new Types.ObjectId(),
+    image: 'https://pbs.twimg.com/media/CvuR_ExUkAA7GTX.jpg',
+    name: 'Chantaje',
+    publish_year: 2016,
+  },
+  {
+    _id: new Types.ObjectId(),
+    image:
+      'https://cherry-brightspot.s3.amazonaws.com/media/2010/06/08/shakira.jpg',
+    name: 'Waka Waka (This Time for Africa)',
+    publish_year: 2010,
+  },
+  {
+    _id: new Types.ObjectId(),
+    image: 'https://pbs.twimg.com/media/CvuR_ExUkAA7GTX.jpg',
+    name: 'Chantaje',
+    publish_year: 2016,
+  },
+  {
+    _id: new Types.ObjectId(),
+    image:
+      'https://cherry-brightspot.s3.amazonaws.com/media/2010/06/08/shakira.jpg',
+    name: 'Waka Waka (This Time for Africa)',
+    publish_year: 2010,
+  },
+  {
+    _id: new Types.ObjectId(),
+    image: 'https://pbs.twimg.com/media/CvuR_ExUkAA7GTX.jpg',
+    name: 'Chantaje',
+    publish_year: 2016,
+  },
+];
+
+export const AdeleSongs: Song[] = [
+  {
+    _id: new Types.ObjectId(),
+    image:
+      'https://i.pinimg.com/564x/ef/70/d9/ef70d9a1db14a75975e9b28d1967b659.jpg',
+    name: 'Hello',
+    publish_year: 2015,
+  },
+  {
+    _id: new Types.ObjectId(),
+    image: 'https://img.youtube.com/vi/GZMcE860DUo/hqdefault.jpg',
+    name: 'Rolling in the Deep',
+    publish_year: 2011,
+  },
+];
+
+export const EminemSongs: Song[] = [
+  {
+    _id: new Types.ObjectId(),
+    image: 'https://chulavista.mx/wp-content/uploads/2013/11/Eminem-1.jpg',
+    name: 'Rap God',
+    publish_year: 2013,
+  },
+  {
+    _id: new Types.ObjectId(),
+    image: 'https://i.scdn.co/image/ab67616d0000b2736ca5c90113b30c3c43ffb8f4',
+    name: 'Without me',
+    publish_year: 2002,
   },
 ];

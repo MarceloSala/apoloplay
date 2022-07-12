@@ -6,14 +6,21 @@
 .populares {
   display: flex;
 
-  border-radius: 8px;
-  padding: 24px;
-  overflow-x: scroll;
-
   width: 95%;
+  padding: 24px;
+
+  overflow-x: scroll;
 }
 
 .artists {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+.test {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  width: 95%;
+  padding: 24px;
 }

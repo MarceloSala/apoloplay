@@ -1,18 +1,13 @@
 import { FC, useState } from 'react';
 import './componentArtist.css';
 import { Artist } from '@apoloplay/definitions';
-import SongPreview from '../song/component';
 
 interface ArtistProps {
   artists: Artist[];
+  handleArtist: any;
 }
-export const ArtistPreview: FC<ArtistProps> = ({ artists }) => {
-  const [display, setDisplay] = useState(false);
 
-  const showSongs = (artist: Artist) => {
-    console.log(artist.songs);
-  };
-
+export const ArtistPreview: FC<ArtistProps> = ({ artists, handleArtist }) => {
   return (
     <>
       {artists.map((artist) => (
@@ -20,7 +15,7 @@ export const ArtistPreview: FC<ArtistProps> = ({ artists }) => {
           <img
             src={artist.image}
             className="artist-img"
-            onClick={() => showSongs(artist)}
+            onClick={(e) => handleArtist(e, artist)}
           />
           <div className="artist-name">
             <p>{artist.alias}</p>
