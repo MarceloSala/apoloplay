@@ -2,6 +2,10 @@ import { Handler, Request, Response } from 'express';
 import { Types } from 'mongoose';
 import { UserMongo } from '../../models/user';
 
+const validateObject = ({ name, last_name, email, password }) => {
+  name && last_name && email && password;
+};
+
 export const getUsers: Handler = async (req: Request, res: Response) => {
   const users = await UserMongo.find();
   return res.status(200).send(users);
@@ -17,8 +21,8 @@ export const getUserById: Handler = async (req: Request, res: Response) => {
 
 export const createUser: Handler = async (req: Request, res: Response) => {
   const user = new UserMongo(req.body);
-  await user.save();
 
+  await user.save();
   // return res.status(400).send({ error: 'Missing attributes' });
   return res.status(201).send(user);
 };
