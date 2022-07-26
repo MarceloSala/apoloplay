@@ -1,6 +1,4 @@
 import * as express from 'express';
-import path = require('path');
-import router from './app/routes';
 
 const app = express();
 

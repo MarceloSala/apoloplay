@@ -1,13 +1,13 @@
 FROM node:16.15.0
 
-WORKDIR /.
+WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
-
-COPY ./dist/apps/authentication-service /.
+COPY ./dist/apps/authentication-service ./
 
 EXPOSE 3000
+
+RUN npm install --production
 
 CMD node main.js
