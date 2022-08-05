@@ -1,2 +1,2 @@
-export * from './songs/controller';
-export * from './artists/controller';
+export * from './songs/service';
+export * from './artists/service';

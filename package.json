@@ -9,7 +9,9 @@
   },
   "private": true,
   "dependencies": {
+    "@types/cors": "^2.8.12",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
     "express": "4.17.2",
     "mongoose": "^6.4.3",
     "react": "18.2.0",

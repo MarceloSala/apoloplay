@@ -22,6 +22,7 @@ export const App: FC = () => {
             <Route path="/artists" element={<Artists />} />
           </Routes>
         </div>
+        <Reproducer />
       </div>
     </>
   );
