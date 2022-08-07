@@ -4,7 +4,6 @@ import './componentSong.css';
 import { Song } from '@apoloplay/definitions';
 import { saveSongProps } from '../../services/localStorage';
 import { SongMock } from '@apoloplay/mocks';
-import Reproducer from '../reproducer/component';
 
 interface SongProps {
   songs?: Song[];
@@ -26,6 +25,7 @@ export const SongPreview: FC<SongProps> = ({ songs }) => {
             className="song-img"
             onClick={() => {
               setSelectedSong(song);
+
               // setPublicSong(song);
             }}
           />

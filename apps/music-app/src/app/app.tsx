@@ -13,6 +13,7 @@ import {
   saveSongPropsArray,
 } from './services/localStorage';
 import { Artist, Song } from '@apoloplay/definitions';
+import { SongMock } from '@apoloplay/mocks';
 
 export const App: FC = () => {
   useEffect(() => {
@@ -42,19 +43,25 @@ export const App: FC = () => {
     fetchArtists();
   }, []);
 
-  const [value, setValue] = useState(false);
-  const [realSong, setRealSong] = useState<Song>();
+  const [realSong, setRealSong] = useState<Song>(SongMock);
+
+  const [currentSong, setCurrentSong] = useState<Song>(realSong);
+  const [songUpToDate, setSongUpToDate] = useState<Song>(currentSong);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setRealSong(getSongProps());
+      setSongUpToDate(getSongProps);
+      if (songUpToDate && currentSong && songUpToDate._id != currentSong._id) {
+        setCurrentSong(songUpToDate);
+      }
     }, 500);
     return () => clearInterval(interval);
-  }, []);
+  });
 
-  const test = () => {
-    value ? setValue(false) : setValue(true);
-  };
+  useEffect(() => {
+    setRealSong(getSongProps);
+  }, [currentSong]);
+
   return (
     <>
       <div className="body-container">
@@ -68,7 +75,6 @@ export const App: FC = () => {
           </Routes>
         </div>
         <Reproducer song={realSong} />
-        <button onClick={() => test()}>CLICKME</button>
       </div>
     </>
   );

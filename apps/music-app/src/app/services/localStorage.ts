@@ -4,6 +4,17 @@ export const saveSongProps = (song: Song) => {
   window.sessionStorage.setItem(LOCAL_STORAGE_KEYS.SONG, JSON.stringify(song));
 };
 
+export const getSongProps = () => {
+  try {
+    const song = JSON.parse(
+      window.sessionStorage.getItem(LOCAL_STORAGE_KEYS.SONG) || ''
+    );
+    return song;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const saveSongPropsArray = (songs: Song[]) => {
   window.sessionStorage.setItem(
     LOCAL_STORAGE_KEYS.SONG_ARRAY,
@@ -17,17 +28,6 @@ export const getSongPropsArray = () => {
       window.sessionStorage.getItem(LOCAL_STORAGE_KEYS.SONG_ARRAY) || ''
     );
     return songs;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const getSongProps = () => {
-  try {
-    const song = JSON.parse(
-      window.sessionStorage.getItem(LOCAL_STORAGE_KEYS.SONG) || ''
-    );
-    return song;
   } catch (error) {
     console.log(error);
   }

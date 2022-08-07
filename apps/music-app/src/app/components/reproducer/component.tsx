@@ -1,5 +1,5 @@
 import { Song } from '@apoloplay/definitions';
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import './reproducer.css';
 
 interface ReproducerProps {
@@ -95,6 +95,19 @@ function scrub(e: any) {
 }
 
 export const Reproducer: FC<ReproducerProps> = ({ song }) => {
+  useEffect(() => {
+    const source = document.querySelector('source') as HTMLSourceElement;
+    const audio = document.querySelector('.player__audio') as HTMLAudioElement;
+    if (!source || !song?.url) {
+      return;
+    }
+    if (!audio.paused) {
+      togglePlay(audio);
+    }
+    source.srcset = song.url;
+    audio.load();
+  }, [song]);
+
   return (
     <>
       <link
@@ -108,7 +121,9 @@ export const Reproducer: FC<ReproducerProps> = ({ song }) => {
         <div className="song-panel">
           <div className="song-info">
             <div className="song-info__title">{song?.name}</div>
-            <div className="song-info__artist">{song?.publish_year}</div>
+            <div className="song-info__artist">
+              {song?.publish_year.valueOf()}
+            </div>
             <div
               className="progress"
               onClick={() => scrub}
@@ -137,7 +152,6 @@ export const Reproducer: FC<ReproducerProps> = ({ song }) => {
               <div className="center__disc"></div>
             </div>
           </div>
-
           <button
             className="play"
             onClick={() =>

@@ -3,10 +3,9 @@ import { Types } from 'mongoose';
 
 export const SongMock: Song = {
   _id: new Types.ObjectId(),
-  image:
-    'https://i.pinimg.com/originals/b4/58/ea/b458eaa8cf4a847e6c175f899502dbb8.png',
-  name: 'Poker Face',
-  publish_year: 2008,
+  image: 'https://i.scdn.co/image/ab67616d00001e023d2c4e58bc3c2ff405b290d4',
+  name: 'YA BASTA',
+  publish_year: 2020,
   url: 'https://www.bensound.com/bensound-music/bensound-dreams.mp3',
 };
 
