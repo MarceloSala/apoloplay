@@ -1,27 +1,39 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import './componentSong.css';
 
 import { Song } from '@apoloplay/definitions';
-import { saveSongProp } from '../../services/localStorage';
+import { saveSongProps } from '../../services/localStorage';
+import { SongMock } from '@apoloplay/mocks';
+import Reproducer from '../reproducer/component';
 
 interface SongProps {
   songs?: Song[];
 }
 
 export const SongPreview: FC<SongProps> = ({ songs }) => {
-  const handleSong = (song: Song) => {
-    saveSongProp(song);
-  };
+  const [selectedSong, setSelectedSong] = useState<Song>(SongMock);
+
+  useEffect(() => {
+    saveSongProps(selectedSong);
+  }, [selectedSong]);
 
   return (
     <>
       {songs?.map((song) => (
         <div key={song._id.toString()} className="song">
-          <img src={song.image} className="song-img" />
+          <img
+            src={song.image}
+            className="song-img"
+            onClick={() => {
+              setSelectedSong(song);
+              // setPublicSong(song);
+            }}
+          />
           <div
             className="song-name"
             onClick={() => {
-              handleSong(song);
+              setSelectedSong(song);
+              // setPublicSong(song);
             }}
           >
             <p>{song.name}</p>

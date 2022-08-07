@@ -1,6 +1,5 @@
 import { Song } from '@apoloplay/definitions';
 import { Types } from 'mongoose';
-import { ArtirtsMock, ArtistsArray } from './artist';
 
 export const SongMock: Song = {
   _id: new Types.ObjectId(),
@@ -8,6 +7,7 @@ export const SongMock: Song = {
     'https://i.pinimg.com/originals/b4/58/ea/b458eaa8cf4a847e6c175f899502dbb8.png',
   name: 'Poker Face',
   publish_year: 2008,
+  url: 'https://www.bensound.com/bensound-music/bensound-dreams.mp3',
 };
 
 export const SongArray: Song[] = [

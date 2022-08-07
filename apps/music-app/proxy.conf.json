@@ -1,6 +1,10 @@
 {
-  "/api": {
+  "/songs": {
     "target": "http://localhost:3001",
-    "secure": false
+    "secure": true
+  },
+  "/artists": {
+    "target": "http://localhost:3001",
+    "secure": true
   }
 }

@@ -1,8 +1,8 @@
 import { Artist } from '@apoloplay/definitions';
 import { Types } from 'mongoose';
-import { AdeleSongs, EminemSongs, ShakiraSongs, SongArray } from './song';
+import { AdeleSongs, EminemSongs, ShakiraSongs } from './song';
 
-export const ArtirtsMock: Artist = {
+export const ArtirtMock: Artist = {
   _id: new Types.ObjectId(),
   name: 'Stefani Joanne Angelina Germanotta',
   alias: 'Lady Gaga',

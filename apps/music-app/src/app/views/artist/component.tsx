@@ -1,26 +1,29 @@
 import './styles.css';
 import { ArtistPreview } from '../../components/artist/component';
-import { ArtistsArray } from '@apoloplay/mocks';
 import { useState } from 'react';
-import { Artist, Song } from '@apoloplay/definitions';
+import { getArtistPropsArray } from '../../services/localStorage';
 import SongPreview from '../../components/song/component';
+import { Artist, Song } from '@apoloplay/definitions';
 
 export const Artists = () => {
-  const [artist, setArtist] = useState<Song[]>();
+  const [artistSongs, setArtistSongs] = useState<Song[]>();
 
-  const handleArtist = (e: any, artist: Artist) => {
-    console.log(e.target);
-    setArtist(artist.songs);
+  const getSongsFromClickedArtist = (artist: Artist) => {
+    setArtistSongs(artist.songs);
   };
+
   return (
     <>
-      <h1 className="title_populares">Populares</h1>
+      <h1 className="title_populares">Artistas</h1>
       <div className="artists">
         <div className="populares">
-          <ArtistPreview artists={ArtistsArray} handleArtist={handleArtist} />
+          <ArtistPreview
+            artists={getArtistPropsArray()}
+            onPress={getSongsFromClickedArtist}
+          />
         </div>
         <div className="test">
-          <SongPreview songs={artist}></SongPreview>
+          <SongPreview songs={artistSongs} />
         </div>
       </div>
     </>

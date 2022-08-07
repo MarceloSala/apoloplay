@@ -10,8 +10,8 @@ export const Navbar: FC = () => {
         <div className="cont-menu">
           <nav>
             <Link to={'/'}>Inicio</Link>
-            <Link to={'/songs'}>Canciones</Link>
-            <Link to={'/artists'}>Artistas</Link>
+            <Link to={'/song'}>Canciones</Link>
+            <Link to={'/artist'}>Artistas</Link>
           </nav>
           <label htmlFor="btn-menu">✖️</label>
         </div>
