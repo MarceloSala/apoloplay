@@ -1,23 +1,23 @@
 version: '2'
 
 services:
-  # music-app:
-  #   build:
-  #     context: .
-  #     dockerfile: ./apps/music-app/Dockerfile
-  #   container_name: music-app
-  #   # depends_on:
-  #   #   - music-service
-  #   ports:
-  #     - "4200:4200"
+  music-app:
+    build:
+      context: .
+      dockerfile: ./apps/music-app/Dockerfile
+    container_name: music-app
+    depends_on:
+      - music-service
+    ports:
+      - "4200:4200"
 
-  # music-service:
-  #   build:
-  #     context: .
-  #     dockerfile: ./apps/music-service/Dockerfile
-  #   container_name: music-service
-  #   ports:
-  #     - "3001:3001"
+  music-service:
+    build:
+      context: .
+      dockerfile: ./apps/music-service/Dockerfile
+    container_name: music-service
+    ports:
+      - "3001:3001"
 
   # auth-app:
   #   build:
@@ -27,10 +27,10 @@ services:
   #   ports:
   #     - "4201:4201"
 
-  auth-service:
-    build:
-      context: .
-      dockerfile: ./apps/authentication-service/Dockerfile
-    container_name: auth-service
-    ports:
-      - "3000:3000"
+  # auth-service:
+  #   build:
+  #     context: .
+  #     dockerfile: ./apps/authentication-service/Dockerfile
+  #   container_name: auth-service
+  #   ports:
+  #     - "3000:3000"

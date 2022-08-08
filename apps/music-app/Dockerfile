@@ -1,6 +1,4 @@
-FROM httpd
+FROM nginx:alpine
 
-COPY ./dist/apps/music-app /usr/local/apache2/htdocs/
-
-EXPOSE 4200
-
+COPY ./dist/apps/music-app /usr/share/nginx/html/
+COPY ./dist/apps/music-app/nginx.conf /etc/nginx/conf.d/default.conf

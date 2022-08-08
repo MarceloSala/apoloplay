@@ -2,12 +2,14 @@ FROM node:16.15.0
 
 WORKDIR /app
 
-COPY package*.json ./
+ENV PATH /app/node_modules/.bin:$PATH
 
-COPY ./dist/apps/music-service ./
-
-EXPOSE 3001
+COPY package*.json .
 
 RUN npm install --production
+
+COPY ./dist/apps/music-service /app
+
+EXPOSE 3001
 
 CMD node main.js

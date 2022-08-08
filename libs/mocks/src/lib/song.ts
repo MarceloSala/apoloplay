@@ -6,7 +6,7 @@ export const SongMock: Song = {
   image: 'https://i.scdn.co/image/ab67616d00001e023d2c4e58bc3c2ff405b290d4',
   name: 'YA BASTA',
   publish_year: 2020,
-  url: 'https://www.bensound.com/bensound-music/bensound-dreams.mp3',
+  url: 'https://ida.ytc.pw/fee513b94016d21b56c9e7694b3048f1/pRpeEdMmmQ0/?r=fullremixes.org',
 };
 
 export const SongArray: Song[] = [
