@@ -51,9 +51,7 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "music-app:build",
-        "hmr": true,
-        "proxyConfig": "apps/music-app/proxy.conf.json",
-        "port": 4200
+        "hmr": true
       },
       "configurations": {
         "development": {

@@ -1,4 +1,4 @@
-import { FC, MouseEventHandler, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import './componentArtist.css';
 import { Artist } from '@apoloplay/definitions';
 import { ArtirtMock } from '@apoloplay/mocks';

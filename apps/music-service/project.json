@@ -30,6 +30,11 @@
       "executor": "@nrwl/node:node",
       "options": {
         "buildTarget": "music-service:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "music-service:build:production"
+        }
       }
     },
     "lint": {

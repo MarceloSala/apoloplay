@@ -1,10 +1,28 @@
-import { model, Schema } from 'mongoose';
+import { Song } from '@apoloplay/definitions';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Types, Document } from 'mongoose';
 
-export const SongSchema = new Schema({
-  image: { type: String },
-  name: { type: String },
-  publish_year: { type: String },
-  url: { type: String },
-});
+@Schema()
+export class SongMongo implements Song {
+  @Prop({ type: Types.ObjectId })
+  _id: Types.ObjectId;
 
-export const SongMongo = model('Song', SongSchema);
+  @Prop({ type: String, required: true })
+  image: string;
+
+  @Prop({ type: String, required: true })
+  name: string;
+
+  @Prop({ type: String, required: true })
+  publish_year: number;
+
+  @Prop({ type: Types.ObjectId, required: true })
+  artist: Types.ObjectId;
+
+  @Prop({ type: String, required: true })
+  url: string;
+}
+
+export type SongDocument = SongMongo & Document;
+
+export const SongSchema = SchemaFactory.createForClass(SongMongo);
